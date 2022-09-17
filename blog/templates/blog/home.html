@@ -7,6 +7,17 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>pedido de socorro</h1>
+    <h1>Home</h1>
+
+    <br>
+    <ul>
+    {% for postagem in postagens %}
+
+        <li><a href="{% url 'leitura_postagem' postagem.id %}">{{ postagem.titulo }}</a>  --  {{ postagem.data_publicacao }}</li>
+
+    {% endfor %}
+    </ul>
+    <br><br><form action="{% url 'create' %}"><input type="submit" value="Create" /></form>
+
 </body>
 </html>
