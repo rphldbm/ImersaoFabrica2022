@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        body {
+            background-color: lightyellow;
+        }
+        h1 {
+            color: black;
+            text-align: centre;
+        }
+        </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +21,7 @@
     <p>{{ postagem.conteudo }}</p>
     <br>
     {% if postagem.postagem_image %}
-    <img src="{{ postagem.postagem_image.url }}">
+    <img src="{{ postagem.postagem_image.url }}" width="1200" height="630">
     {% endif %}
     <br><br><form action="{% url 'update' postagem.id %}"><input type="submit" value="Update" /></form>
     <br><form action="{% url 'home' %}"><input type="submit" value="Back" /></form>
